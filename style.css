@@ -1,0 +1,87 @@
+* {
+	font-family: Segoe UI, Trebuchet MS, sans-serif;
+	color: #DDDDDD;
+	text-decoration: none;
+}
+
+/* Adds effects for hover of links */
+a:hover {
+	text-decoration: underline;
+}
+
+/* Defines the style and image of the background */
+#background {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Defines the style of the global div tag */
+#globaldiv {
+	position: relative;
+	z-index: 1;
+	margin: 0 auto;
+	width: 800px;
+}
+	
+	/* Defines the style, formatting and bg image of the header */
+	#header {
+		position: relative;
+		font-size: 48pt;
+		top: 30px;
+		background-image: url(images/divbg.png);
+		padding-left: 48px;
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+	
+	/* Defines the style, formatting and bg image of the links section */
+	#links {
+		position: relative;
+		top: 36px;
+		background-image: url(images/divbg.png);
+		line-height: 18pt;
+		padding-left: 48px;
+		padding-top: 36px;
+		padding-bottom: 36px; 
+	}
+	
+	/* Formatting and positioning of search box */
+	#search {
+		position: relative;
+		margin-top: 64px;
+		padding-left: 48px;
+		padding-top: 36px;
+		padding-bottom: 24px;
+		background-image: url(images/divbg.png);
+	}
+		
+		/* Font sizes and positioning for various elements */
+		#searchbar {
+			font-size: 18pt;
+			color: #000000;
+			border-width: 0px;
+			width: 704px;
+			opacity: 0.8;
+			background-image: url(images/search.png);
+			background-repeat: no-repeat;
+			padding-left: 32px;
+		}
+		
+		#link {
+			line-height: 24pt;
+			font-size: 16pt;
+		}
+
+		#categories {
+			font-size: 28pt;
+		}
+		
+		#line {
+			width: 704px;
+			height: 1px;
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
