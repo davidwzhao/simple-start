@@ -1,0 +1,102 @@
+/* root class storing variables! */
+:root {
+    --background:   #1D1F28;
+    --foreground:   #FDFDFD;
+    --darkgrey:     #414458;
+    --red:          #FF4971;
+    --green:        #18E3C8;
+    --yellow:       #FF8037;
+    --blue:         #556FFF;
+    --magenta:      #B043D1;
+    --cyan:         #3FDCEE;
+    --white:        #BEBEC1;
+    --darkred:      #F37F97;
+    --darkgreen:    #5ADECD;
+    --darkyellow:   #F2A272;
+    --darkblue:     #8897F4;
+    --darkmagenta:  #C574DD;
+    --darkcyan:     #79E6F3;
+    --lightgrey:    #FDFDFD;
+
+    --containerpadding: 20px;
+    --maxwidth: 1200px;
+
+    --monospace: Iosevka, Lucida Console, monospace;
+}
+
+body {
+    background-color: var(--background);
+}
+
+.greeting {
+    color: var(--foreground);
+    max-width: var(--maxwidth);
+
+    /* maintain size of div even with padding */
+    box-sizing: border-box;
+    padding: var(--containerpadding);
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 10vh;
+}
+
+#greeting-time {
+    font-family: var(--monospace);
+    font-size: 16pt;
+    color: var(--cyan);
+}
+
+#greeting-text {
+    font-family: var(--monospace);
+    font-size: 48pt;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #1D1F28;
+
+    max-width: var(--maxwidth);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Define base style for a box */
+.box {
+    background-color: #414458;
+    color: #FDFDFD;
+    height: 32em;
+    padding: 20px;
+    margin: 20px;
+
+    border-top: 1px solid var(--green);
+
+    min-width: 300px;
+    flex-grow: 1;
+}
+
+.section-heading {
+    font-family: var(--monospace);
+    font-size: 16pt;
+    color: var(--green);
+}
+
+.links {
+    flex: 3 0 auto;
+}
+
+.side-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1 0 0;
+}
+
+.news {
+    flex: 1 0 0;
+}
+
+.weather {
+    flex: 1 0 0;
+}
