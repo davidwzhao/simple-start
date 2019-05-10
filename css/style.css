@@ -16,7 +16,6 @@
     --darkblue:     #8897F4;
     --darkmagenta:  #C574DD;
     --darkcyan:     #79E6F3;
-    --lightgrey:    #FDFDFD;
 
     --containerpadding: 20px;
     --maxwidth: 1200px;
@@ -34,17 +33,28 @@ body {
 
     /* maintain size of div even with padding */
     box-sizing: border-box;
-    padding: var(--containerpadding);
+    padding: 10px;
     margin-left: auto;
     margin-right: auto;
 
     margin-top: 10vh;
 }
 
-#greeting-time {
+.greeting-time-date {
     font-family: var(--monospace);
     font-size: 16pt;
+}
+
+#greeting-time {
     color: var(--cyan);
+}
+
+#greeting-date {
+    color: var(--white);
+}
+
+#greeting-separator {
+    color: var(--white);
 }
 
 #greeting-text {
@@ -67,13 +77,13 @@ body {
     background-color: #414458;
     color: #FDFDFD;
     height: 32em;
-    padding: 20px;
-    margin: 20px;
+    padding: var(--containerpadding);
+    margin: 10px;
 
     border-top: 1px solid var(--green);
 
     min-width: 300px;
-    flex-grow: 1;
+    flex: 1 0 0;
 }
 
 .section-heading {
@@ -83,14 +93,14 @@ body {
 }
 
 .links {
-    flex: 3 0 auto;
+    flex: 3 0 0;
 }
 
 .side-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    flex: 1 0 0;
+    flex: 2 0 0;
 }
 
 .news {
