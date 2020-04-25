@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- set scaling factor so it looks correct on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8"/>
+
     <head>
-        <title>What is this lol</title>
+        <title>Startpage</title>
         <link rel="stylesheet" href="css/style.css" />
+        <script src="js/greeting.js"></script>
     </head>
 
     <body>
-        <div class="greeting">
-            <script src="js/greeting.js"></script>
-            <span class="greeting-time-date" id="greeting-time"></span>
-            <span class="greeting-time-date" id="greeting-separator">// </span>
-            <span class="greeting-time-date" id="greeting-date"></span></span><br />
-            <span id="greeting-text">Good evening!</span>
+        <div class="header" id="greeting">
+            <div class="header-box" id="header-left">
+                <span class="header-line-1" id="greeting-time"></span>
+                <span class="header-line-1" id="greeting-separator"> // </span>
+                <span class="header-line-1" id="greeting-date"></span></span><br />
+                <span class="header-line-2" id="greeting-text">Good evening</span>
+            </div>
+
+            <div class="header-box header-weather" id="weather-container">
+                <span class="header-right-text" id="weather-text">TODO: weather</span>
+
+            </div>
         </div>
 
         <div class="main-container">

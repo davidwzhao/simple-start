@@ -1,5 +1,5 @@
-/* root class storing variables! */
-:root {
+/* store variables in html */
+html {
     --background:   #1D1F28;
     --foreground:   #FDFDFD;
     --darkgrey:     #414458;
@@ -20,29 +20,68 @@
     --containerpadding: 20px;
     --maxwidth: 1200px;
 
-    --monospace: Iosevka, Lucida Console, monospace;
+    --body-font: Iosevka, Lucida Console, monospace;
+    --header-font: Source Sans Pro, Arial, sans-serif;
 }
 
 body {
     background-color: var(--background);
 }
 
-.greeting {
-    color: var(--foreground);
+/**
+ * all the stuff for the header section
+ *
+ */
+.header {
+    /* layout */
     max-width: var(--maxwidth);
-
-    /* maintain size of div even with padding */
-    box-sizing: border-box;
+    box-sizing: border-box; /* maintain size of div even with padding */
     padding: 10px;
+
     margin-left: auto;
     margin-right: auto;
-
     margin-top: 10vh;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    /* style */
+    color: var(--foreground);
 }
 
-.greeting-time-date {
-    font-family: var(--monospace);
+.header-box {
+    flex: 3 0 0;
+    min-width: 300px;
+}
+
+.header-weather {
+    /* define this after .header-box */
+    flex: 1 0 0;
+
+    align-self: stretch;    /* fill full height of parent */
+    display: flex;          /* allow child to be anchored to bottom right */
+    flex-direction: row-reverse;    /* anchor to right */
+    align-items: flex-end;  /* anchor to bottom */
+}
+
+.header-line-1 {
+    /* layout */
+    text-align: left;
+
+    /* style */
+    font-family: var(--body-font);
     font-size: 16pt;
+}
+
+.header-line-2 {
+    /* layout */
+    text-align: left;
+
+    /* style */
+    font-family: var(--header-font);
+    font-weight: bold;
+    font-size: 48pt;
 }
 
 #greeting-time {
@@ -57,11 +96,20 @@ body {
     color: var(--white);
 }
 
-#greeting-text {
-    font-family: var(--monospace);
-    font-size: 48pt;
+.header-right-text {
+    flex: 1 0 0;
+
+    font-family: var(--header-font);
+    font-weight: bold;
+    font-size: 16pt;
+
+    text-align: right;
 }
 
+/**
+ * all the stuff for the main part of the page
+ *
+ */
 .main-container {
     display: flex;
     flex-wrap: wrap;
@@ -87,7 +135,7 @@ body {
 }
 
 .section-heading {
-    font-family: var(--monospace);
+    font-family: var(--body-font);
     font-size: 16pt;
     color: var(--green);
 }
