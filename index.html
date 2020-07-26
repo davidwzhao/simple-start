@@ -7,9 +7,20 @@
         <title>Startpage</title>
         <link rel="stylesheet" href="css/style.css" />
         <script src="js/greeting.js"></script>
+        <script src="js/colorschemes.js"></script>
+        <script src="js/preferences.js"></script>
     </head>
 
     <body>
+        <div class="sidebar" id="preferences-sidebar">
+            Preferences:
+
+            <form id="preferences-form" action="javascript: processPreferences();">
+                <button type=submit>Apply</button>
+            </form>
+
+        </div>
+
         <div class="header" id="greeting">
             <div class="header-box" id="header-left">
                 <span class="header-line-1" id="greeting-time"></span>

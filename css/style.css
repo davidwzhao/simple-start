@@ -113,7 +113,7 @@ body {
 .main-container {
     display: flex;
     flex-wrap: wrap;
-    background-color: #1D1F28;
+    background-color: var(--background);
 
     max-width: var(--maxwidth);
     margin-left: auto;
@@ -122,13 +122,14 @@ body {
 
 /* Define base style for a box */
 .box {
-    background-color: #414458;
-    color: #FDFDFD;
+    background-color: var(--darkgrey);
+    color: var(--foreground);
     height: 32em;
     padding: var(--containerpadding);
     margin: 10px;
 
-    border-top: 1px solid var(--green);
+    border-top: 1px solid var(--darkyellow);
+    border-radius: 4px;
 
     min-width: 300px;
     flex: 1 0 0;
@@ -157,4 +158,33 @@ body {
 
 .weather {
     flex: 1 0 0;
+}
+
+/*
+ * Preferences sidebar
+ */
+.sidebar {
+    width: 300px;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0px 0px 0px 0px;
+
+    z-index: 1;
+
+    background-color: var(--cyan);
+}
+
+
+/* CSS special cases for small screens */
+@media (max-width: 799px) {
+    .header-line-1 {
+        font-size: 14pt;
+    }
+
+    .header-line-2 {
+        font-size: 32pt;
+    }
 }

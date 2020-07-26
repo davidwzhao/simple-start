@@ -77,8 +77,8 @@ function setGreeting() {
     t = setTimeout('setGreeting()', 600000)
 }
 
-window.onload = function() {
+window.addEventListener("load", function() {
     setTime()
     setDate()
     setGreeting()
-}
+});
